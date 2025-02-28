@@ -131,6 +131,6 @@ def performance_on_categorical_slice(
         # use training = False
         data_slice, categorical_features = categorical_features, label=label, training=False, encoder=encoder, lb=lb
     )
-    preds = None # your code here to get prediction on X_slice using the inference function
+    preds = inference(model, X_slice) # your code here to get prediction on X_slice using the inference function
     precision, recall, fbeta = compute_model_metrics(y_slice, preds)
     return precision, recall, fbeta
